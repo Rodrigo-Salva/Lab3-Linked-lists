@@ -1,9 +1,5 @@
 # Linked Lists Laboratory Assignment
 
-## Student Information
-- Name: [Your Name]
-- Course: Data Structures and Algorithms
-
 ## Introduction
 
 This laboratory focuses on implementing and understanding linked lists in Python. Linked lists are fundamental data structures consisting of nodes that contain data and references to other nodes. This implementation covers the basic operations of a singly linked list including insertion, deletion, search, and various other utility methods.
