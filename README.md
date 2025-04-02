@@ -1,12 +1,13 @@
-# Linked Lists Laboratory Assignment
+# 🔗 Linked Lists Laboratory Assignment
 
-## Introduction
+
+## 📚 Introduction
 
 This laboratory focuses on implementing and understanding linked lists in Python. Linked lists are fundamental data structures consisting of nodes that contain data and references to other nodes. This implementation covers the basic operations of a singly linked list including insertion, deletion, search, and various other utility methods.
 
-## Implementation
+## 💻 Implementation
 
-### Node Class
+### 🧩 Node Class
 
 The Node class serves as the building block for our linked list:
 
@@ -56,7 +57,7 @@ class Node:
         self.next = next_node
 ```
 
-### LinkedList Class
+### 📋 LinkedList Class
 
 The LinkedList class manages the collection of nodes and provides methods to manipulate them:
 
@@ -75,9 +76,9 @@ class LinkedList:
         self.length = 0
 ```
 
-## Exercises Implementation
+## 🧪 Exercises Implementation
 
-### Exercise 1: Displaying the List
+### 🖨️ Exercise 1: Displaying the List
 
 ```python
 def display(self):
@@ -100,10 +101,10 @@ def display(self):
     return result + "None"
 ```
 
-**Analysis:**
+**🔍 Analysis:**
 This method traverses the entire linked list, starting from the head, and creates a string representation of the list. It handles the empty list case properly and adds a "None" at the end to indicate the end of the list. Time complexity is O(n) where n is the number of nodes in the list.
 
-### Exercise 2: Counting Nodes
+### 🔢 Exercise 2: Counting Nodes
 
 ```python
 def list_length(self):
@@ -123,10 +124,10 @@ def list_length(self):
     return count
 ```
 
-**Analysis:**
+**🔍 Analysis:**
 This method traverses the entire linked list and counts the nodes. While our implementation already maintains a length attribute that's updated with each insertion/deletion, this method provides a way to verify that count and can be useful for debugging. Time complexity is O(n).
 
-### Exercise 3: Insertion at the Beginning
+### ⬅️ Exercise 3: Insertion at the Beginning
 
 ```python
 def insert_at_beginning(self, data):
@@ -151,10 +152,10 @@ def insert_at_beginning(self, data):
     return True
 ```
 
-**Analysis:**
+**🔍 Analysis:**
 This method creates a new node and inserts it at the beginning of the list by making it the new head. It handles both empty and non-empty lists. Since it only involves modifying the head pointer, the time complexity is O(1), which is very efficient.
 
-### Exercise 4: Insertion at the End
+### ➡️ Exercise 4: Insertion at the End
 
 ```python
 def insert_at_end(self, data):
@@ -184,10 +185,10 @@ def insert_at_end(self, data):
     return True
 ```
 
-**Analysis:**
+**🔍 Analysis:**
 This method inserts a new node at the end of the list. If the list is empty, it becomes the head. Otherwise, we traverse to the last node and set its next pointer to the new node. Time complexity is O(n) because we need to traverse the entire list to find the end.
 
-### Exercise 5: Insertion at a Specific Position
+### 📍 Exercise 5: Insertion at a Specific Position
 
 ```python
 def insert_at_position(self, position, data):
@@ -230,10 +231,10 @@ def insert_at_position(self, position, data):
     return True
 ```
 
-**Analysis:**
+**🔍 Analysis:**
 This method inserts a node at a specific position in the list. It handles edge cases by delegating to the appropriate specialized methods for the beginning and end. For middle positions, it traverses to the node just before the insertion point. Time complexity is O(n) in the worst case, but can be O(1) for the beginning.
 
-### Exercise 6: Deletion from the Beginning
+### ❌ Exercise 6: Deletion from the Beginning
 
 ```python
 def delete_from_beginning(self):
@@ -253,10 +254,10 @@ def delete_from_beginning(self):
     return data
 ```
 
-**Analysis:**
+**🔍 Analysis:**
 This method removes the first node from the list by updating the head pointer. It returns the data from the deleted node, making it useful for implementing other data structures like queues. Time complexity is O(1).
 
-### Exercise 7: Deletion from the End
+### ❌ Exercise 7: Deletion from the End
 
 ```python
 def delete_from_end(self):
@@ -289,10 +290,10 @@ def delete_from_end(self):
     return data
 ```
 
-**Analysis:**
+**🔍 Analysis:**
 This method deletes the last node of the list. It requires traversing to the second-to-last node, since our linked list only has references to the next node (not previous). The time complexity is O(n) as we need to traverse the list to find the second-to-last node.
 
-### Exercise 8: Deletion from a Specific Position
+### ❌ Exercise 8: Deletion from a Specific Position
 
 ```python
 def delete_from_position(self, position):
@@ -334,10 +335,10 @@ def delete_from_position(self, position):
     return data
 ```
 
-**Analysis:**
+**🔍 Analysis:**
 This method deletes a node at a specific position. It follows a similar pattern to insertion at a position but updates the next pointers to bypass the node being deleted. Time complexity is O(n) in the worst case.
 
-### Exercise 9: Searching
+### 🔎 Exercise 9: Searching
 
 ```python
 def search(self, data):
@@ -366,10 +367,10 @@ def search(self, data):
     return -1
 ```
 
-**Analysis:**
+**🔍 Analysis:**
 This method searches for a specific value in the list and returns its position. It traverses the list until it finds the value or reaches the end. Time complexity is O(n) in the worst case when the element isn't found or is at the end.
 
-### Exercise 10: Finding the Nth Node from the End
+### 🔄 Exercise 10: Finding the Nth Node from the End
 
 ```python
 def get_nth_from_end(self, n):
@@ -398,10 +399,10 @@ def get_nth_from_end(self, n):
     return current.get_data()
 ```
 
-**Analysis:**
+**🔍 Analysis:**
 This method finds the nth node from the end of the list. It first calculates the corresponding position from the beginning and then traverses to that node. Time complexity is O(n).
 
-### Exercise 11: Clearing the List
+### 🗑️ Exercise 11: Clearing the List
 
 ```python
 def clear(self):
@@ -416,10 +417,10 @@ def clear(self):
     return True
 ```
 
-**Analysis:**
+**🔍 Analysis:**
 This method clears the entire list by setting the head to None. The garbage collector will handle removing the unreferenced nodes. Time complexity is O(1).
 
-### Exercise 12: Detecting a Cycle in a Linked List
+### 🔄 Exercise 12: Detecting a Cycle in a Linked List
 
 ```python
 def has_cycle(self):
@@ -448,10 +449,10 @@ def has_cycle(self):
     return False
 ```
 
-**Analysis:**
+**🔍 Analysis:**
 This method uses Floyd's Cycle-Finding Algorithm (also known as the "tortoise and hare" algorithm) to detect if there's a cycle in the list. It uses two pointers moving at different speeds - if they ever meet, there must be a cycle. Time complexity is O(n).
 
-### Exercise 13: Reversing a Linked List
+### 🔄 Exercise 13: Reversing a Linked List
 
 ```python
 def reverse(self):
@@ -484,10 +485,10 @@ def reverse(self):
     return True
 ```
 
-**Analysis:**
+**🔍 Analysis:**
 This method reverses the linked list by changing the direction of all the next pointers. It uses three pointers (previous, current, and next) to manage the reversal process. Time complexity is O(n).
 
-### Exercise 14: Finding the Middle of a Linked List
+### 🎯 Exercise 14: Finding the Middle of a Linked List
 
 ```python
 def find_middle(self):
@@ -512,10 +513,10 @@ def find_middle(self):
     return slow.get_data()
 ```
 
-**Analysis:**
+**🔍 Analysis:**
 This method finds the middle node of the list using the two-pointer technique. One pointer moves twice as fast as the other, so when the fast one reaches the end, the slow one is at the middle. Time complexity is O(n/2), which simplifies to O(n).
 
-### Exercise 15: Queue Implementation Using Linked List
+### 🧵 Exercise 15: Queue Implementation Using Linked List
 
 ```python
 class Queue:
@@ -570,7 +571,7 @@ class Queue:
         return self.linked_list.display()
 ```
 
-**Analysis:**
+**🔍 Analysis:**
 This Queue implementation uses our LinkedList class to store and manage elements. It follows the FIFO (First-In-First-Out) principle by:
 1. Adding elements at the end of the list (enqueue)
 2. Removing elements from the beginning (dequeue)
@@ -582,9 +583,9 @@ The time complexities are:
 - peek: O(1) since we just access the head
 - is_empty and size: O(1) since we check/return stored values
 
-## Testing Code
+## 🧪 Testing Code
 
-### Basic Operations Test
+### 🔬 Basic Operations Test
 
 ```python
 def test_linked_list():
@@ -677,7 +678,7 @@ if __name__ == "__main__":
     test_linked_list()
 ```
 
-### Queue Test
+### 🧵 Queue Test
 
 ```python
 def test_queue():
@@ -723,9 +724,9 @@ if __name__ == "__main__":
     test_queue()
 ```
 
-## Execution Results
+## 📊 Execution Results
 
-### LinkedList Test Results
+### 📝 LinkedList Test Results
 
 ```
 Created a new linked list
@@ -776,7 +777,7 @@ List: 100 -> 150 -> 200 -> None
 Length: 3
 ```
 
-### Queue Test Results
+### 📝 Queue Test Results
 
 ```
 Created a new queue
@@ -808,31 +809,31 @@ Queue: Empty list
 Is empty? True
 ```
 
-## Conclusions
+## 📝 Conclusions
 
-1. **Data Structure Design**: Implementing a linked list from scratch helps understand how data structures are designed and the trade-offs involved in their implementation.
+1. **🏗️ Data Structure Design**: Implementing a linked list from scratch helps understand how data structures are designed and the trade-offs involved in their implementation.
 
-2. **Operation Efficiency**: Different operations on linked lists have different time complexities:
+2. **⚡ Operation Efficiency**: Different operations on linked lists have different time complexities:
    - Insertion/deletion at the beginning: O(1)
    - Insertion/deletion at the end or middle: O(n)
    - Searching: O(n)
    - These characteristics make linked lists suitable for certain applications and less suitable for others.
 
-3. **Memory Management**: Linked lists use dynamic memory allocation, with each node being allocated separately. This offers flexibility but requires proper pointer management to avoid memory leaks or invalid references.
+3. **💾 Memory Management**: Linked lists use dynamic memory allocation, with each node being allocated separately. This offers flexibility but requires proper pointer management to avoid memory leaks or invalid references.
 
-4. **Implementation of Other Data Structures**: As demonstrated with the Queue implementation, linked lists can serve as the foundation for building other data structures.
+4. **🧱 Implementation of Other Data Structures**: As demonstrated with the Queue implementation, linked lists can serve as the foundation for building other data structures.
 
-5. **Algorithm Application**: The lab provided practical experience with common algorithms like Floyd's Cycle-Finding Algorithm and the two-pointer technique for finding the middle of a list.
+5. **🔬 Algorithm Application**: The lab provided practical experience with common algorithms like Floyd's Cycle-Finding Algorithm and the two-pointer technique for finding the middle of a list.
 
-6. **Skills Development**: This lab enhanced skills in:
+6. **🔧 Skills Development**: This lab enhanced skills in:
    - Object-oriented programming
    - Algorithm analysis
    - Debugging complex pointer operations
    - Understanding abstract data types
 
-7. **Linked Lists vs. Arrays**: Through this implementation, it's clear that linked lists excel at insertions and deletions in positions where the pointer is already known, while arrays excel at random access by index. This is a fundamental trade-off in data structure selection.
+7. **⚖️ Linked Lists vs. Arrays**: Through this implementation, it's clear that linked lists excel at insertions and deletions in positions where the pointer is already known, while arrays excel at random access by index. This is a fundamental trade-off in data structure selection.
 
-## References
+## 📚 References
 
 1. The linked list laboratory document provided for this assignment
 2. [Python Data Structures and Algorithms documentation](https://docs.python.org/3/tutorial/datastructures.html)
